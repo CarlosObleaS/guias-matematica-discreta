@@ -15,6 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # <--- ESTO ARREGLA EL ERROR
+
       - name: Install, build, and upload with Astro
         uses: withastro/action@v3
 
